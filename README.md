@@ -120,7 +120,7 @@ Configuration environment variables:
 | `TAKT_KEEPER_SECRET` | *(Required)* | Stellar secret key (S...) for keeper execution and signing |
 | `TAKT_POLL_INTERVAL_SECONDS` | `10` | Interval between job state polling cycles |
 | `TAKT_API_PORT` | `8080` | Port for the `/health` and metrics HTTP server |
-| `VITE_JOB_ENGINE_ID` | `CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC` | JobEngine contract ID |
+| `VITE_JOB_ENGINE_ID` | `CC6ZSDYSGFAZDJ2FP2RT2ZV6NUZN4OFEWYNIS3CYOG2CBG7DIJDCWYOT` | JobEngine contract ID |
 
 ### 3. Web Dashboard (`apps/web`)
 
@@ -145,6 +145,15 @@ Takt Protocol smart contracts run on Stellar Soroban:
 - **Keeper Registry**: Handles keeper staking, unbonding cooldowns, and slashes.
 - **Bounty Vault**: Holds collateral escrow for scheduled jobs and enforces 5% protocol fee splits.
 - **Job Engine**: Evaluates job execution intervals, verifies keeper eligibility, and invokes target contracts.
+
+### Deployed Stellar Testnet Contracts
+
+| Contract | Address | Explorer |
+|----------|---------|----------|
+| `keeper-registry` | `CDSBDXYELFFHM7XMG4D4BXEVETOHQDWPQOTQLPRHGTTVW7DTNODHIIZN` | [Stellar.Expert](https://stellar.expert/explorer/testnet/contract/CDSBDXYELFFHM7XMG4D4BXEVETOHQDWPQOTQLPRHGTTVW7DTNODHIIZN) |
+| `bounty-vault` | `CDDIJAZCXR7TWSTI4B2FSE7MCXFKH2JVOBT4WELSSJLZHV5XQ4PKHEGO` | [Stellar.Expert](https://stellar.expert/explorer/testnet/contract/CDDIJAZCXR7TWSTI4B2FSE7MCXFKH2JVOBT4WELSSJLZHV5XQ4PKHEGO) |
+| `job-engine` | `CC6ZSDYSGFAZDJ2FP2RT2ZV6NUZN4OFEWYNIS3CYOG2CBG7DIJDCWYOT` | [Stellar.Expert](https://stellar.expert/explorer/testnet/contract/CC6ZSDYSGFAZDJ2FP2RT2ZV6NUZN4OFEWYNIS3CYOG2CBG7DIJDCWYOT) |
+| `token` (Wrapped Native XLM) | `CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC` | [Stellar.Expert](https://stellar.expert/explorer/testnet/contract/CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC) |
 
 ---
 
