@@ -16,7 +16,7 @@ import { DeployView } from "./components/DeployView.js";
 const INITIAL_JOBS: Job[] = [
   {
     id: 1,
-    owner: "GB7T7QW7U6J6Z2F3X4V5B6N7M8K9L2P3Q4R5S6T7U8V9W2X3Y4Z5A6B7",
+    owner: "GBKGRYZZEELD6POCG5E3MNMA3CT7OKF45CUX3FUDSJH6NJXAMTPXIYRS",
     targetContract: "CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC",
     targetFn: "harvest_yield",
     targetArgsXdr: [],
@@ -30,9 +30,9 @@ const INITIAL_JOBS: Job[] = [
   },
   {
     id: 2,
-    owner: "GB7T7QW7U6J6Z2F3X4V5B6N7M8K9L2P3Q4R5S6T7U8V9W2X3Y4Z5A6B7",
-    targetContract: "CCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB",
-    targetFn: "rebalance_pool",
+    owner: "GBKGRYZZEELD6POCG5E3MNMA3CT7OKF45CUX3FUDSJH6NJXAMTPXIYRS",
+    targetContract: "CDSBDXYELFFHM7XMG4D4BXEVETOHQDWPQOTQLPRHGTTVW7DTNODHIIZN",
+    targetFn: "get_total_keepers",
     targetArgsXdr: [],
     intervalSeconds: 60,
     lastExecutedAt: 1730200500,
@@ -46,7 +46,7 @@ const INITIAL_JOBS: Job[] = [
 
 const INITIAL_KEEPERS: KeeperInfo[] = [
   {
-    address: "GD5K3M2N4P6Q8R9S2T3U4V5W6X7Y8Z9A2B3C4D5E6F7G8H9J2K3L4M5N",
+    address: "GBKGRYZZEELD6POCG5E3MNMA3CT7OKF45CUX3FUDSJH6NJXAMTPXIYRS",
     stakedAmount: 2_500_000_000n,
     status: "Active",
     registeredAt: 1730100000,
@@ -95,7 +95,7 @@ export const App: React.FC = () => {
 
   const handleConnectWallet = () => {
     setWalletAddress(
-      "GB7T7QW7U6J6Z2F3X4V5B6N7M8K9L2P3Q4R5S6T7U8V9W2X3Y4Z5A6B7",
+      "GBKGRYZZEELD6POCG5E3MNMA3CT7OKF45CUX3FUDSJH6NJXAMTPXIYRS",
     );
   };
 
