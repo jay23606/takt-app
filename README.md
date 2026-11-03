@@ -88,7 +88,7 @@ const client = new TaktClient({
 
 // Build a create_job transaction descriptor
 const call = client.buildCreateJobCall({
-  owner: "GB7T7QW7U6J6Z2F3X4V5B6N7M8K9L2P3Q4R5S6T7U8V9W2X3Y4Z5A6B7",
+  owner: "GBKGRYZZEELD6POCG5E3MNMA3CT7OKF45CUX3FUDSJH6NJXAMTPXIYRS",
   targetContract: "CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC",
   targetFn: "harvest_yield",
   intervalSeconds: 300,
@@ -120,7 +120,9 @@ Configuration environment variables:
 | `TAKT_KEEPER_SECRET` | *(Required)* | Stellar secret key (S...) for keeper execution and signing |
 | `TAKT_POLL_INTERVAL_SECONDS` | `10` | Interval between job state polling cycles |
 | `TAKT_API_PORT` | `8080` | Port for the `/health` and metrics HTTP server |
-| `VITE_JOB_ENGINE_ID` | `CC6ZSDYSGFAZDJ2FP2RT2ZV6NUZN4OFEWYNIS3CYOG2CBG7DIJDCWYOT` | JobEngine contract ID |
+| `TAKT_KEEPER_REGISTRY_ID` | `CDSBDXYELFFHM7XMG4D4BXEVETOHQDWPQOTQLPRHGTTVW7DTNODHIIZN` | KeeperRegistry contract ID |
+| `TAKT_BOUNTY_VAULT_ID` | `CDDIJAZCXR7TWSTI4B2FSE7MCXFKH2JVOBT4WELSSJLZHV5XQ4PKHEGO` | BountyVault contract ID |
+| `TAKT_JOB_ENGINE_ID` | `CC6ZSDYSGFAZDJ2FP2RT2ZV6NUZN4OFEWYNIS3CYOG2CBG7DIJDCWYOT` | JobEngine contract ID |
 
 ### 3. Web Dashboard (`apps/web`)
 
@@ -154,6 +156,13 @@ Takt Protocol smart contracts run on Stellar Soroban:
 | `bounty-vault` | `CDDIJAZCXR7TWSTI4B2FSE7MCXFKH2JVOBT4WELSSJLZHV5XQ4PKHEGO` | [Stellar.Expert](https://stellar.expert/explorer/testnet/contract/CDDIJAZCXR7TWSTI4B2FSE7MCXFKH2JVOBT4WELSSJLZHV5XQ4PKHEGO) |
 | `job-engine` | `CC6ZSDYSGFAZDJ2FP2RT2ZV6NUZN4OFEWYNIS3CYOG2CBG7DIJDCWYOT` | [Stellar.Expert](https://stellar.expert/explorer/testnet/contract/CC6ZSDYSGFAZDJ2FP2RT2ZV6NUZN4OFEWYNIS3CYOG2CBG7DIJDCWYOT) |
 | `token` (Wrapped Native XLM) | `CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC` | [Stellar.Expert](https://stellar.expert/explorer/testnet/contract/CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC) |
+
+---
+
+## Project Status & Current Limitations
+
+- **Testnet Alpha (Unaudited):** Currently operating on Stellar Testnet (`Test SDF Network ; September 2015`).
+- **SDK & Web Transaction Signing:** `@takt-protocol/sdk` constructs validated contract call descriptors (`TaktContractCall`) and queries Soroban RPC; full XDR transaction assembly/signing in the Go keeper (`services/keeper`) and browser wallet signing via `@stellar/freighter-api` in `apps/web` are active roadmap items tracked in open GitHub issues.
 
 ---
 

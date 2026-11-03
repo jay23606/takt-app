@@ -48,9 +48,9 @@ describe("@takt-protocol/sdk", () => {
   it("builds validated contract call descriptors", () => {
     const client = new TaktClient();
     const call = client.buildCreateJobCall({
-      owner: "GOWNER123",
-      targetContract: "CTARGET123",
-      targetFn: "increment",
+      owner: "GBKGRYZZEELD6POCG5E3MNMA3CT7OKF45CUX3FUDSJH6NJXAMTPXIYRS",
+      targetContract: "CDSBDXYELFFHM7XMG4D4BXEVETOHQDWPQOTQLPRHGTTVW7DTNODHIIZN",
+      targetFn: "get_total_keepers",
       intervalSeconds: 60,
       bountyPerRun: 200_000n,
       maxRuns: 3,
